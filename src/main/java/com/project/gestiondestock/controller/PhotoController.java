@@ -1,0 +1,2 @@
+package com.project.gestiondestock.controller;public class PhotoController {
+}

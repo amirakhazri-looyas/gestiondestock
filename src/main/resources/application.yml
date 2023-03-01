@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestiondestock?createDatabaseIfNotExist=true&userSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  ## Specify DBMS
+  jpa:
+    database: MYSQL
+    show-sql: false
+    # Hibernate DDL Auto (create, create-drop, update)
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+    properties:
+      hibernate:
+        ejb:
+          interceptor: com.project.gestiondestock.interceptor.Interceptor
+
+server:
+  port: 8088
+
+flickr:
+  apiKey: 1e6fdc5ebfd9b3e1670f6d58300767d5
+  apiSecret: e2ae7aa3068b45bf
+  appKey: 72157720874046032-4a1e6b8c5753bc02
+  appSecret: b62fdaa127c349f6
